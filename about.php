@@ -13,4 +13,4 @@
     <h3>Ảnh minh chứng cài đặt môi trường (PHP/MySQL)</h3>
     <img src="xampp.png" alt="XAMPP Status" width="600">
 </body>
-</html>
+</html> 
