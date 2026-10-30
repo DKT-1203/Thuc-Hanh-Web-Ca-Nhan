@@ -15,7 +15,7 @@
 </head>
 <body>
     <h2>Danh sách Ghi chú Cá nhân (Phiên bản chuẩn MVC)</h2>
-    <a href="#" class="btn-add">+ Thêm Ghi chú mới</a>
+<a href="index.php?action=create" class="btn-add">+ Thêm Ghi chú mới</a>
     
     <table>
         <tr>

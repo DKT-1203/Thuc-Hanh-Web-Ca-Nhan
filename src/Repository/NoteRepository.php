@@ -13,5 +13,10 @@ class NoteRepository {
         $stmt = $this->pdo->query('SELECT * FROM notes ORDER BY id DESC');
         return $stmt->fetchAll();
     }
+    // Hàm thêm ghi chú mới vào cơ sở dữ liệu
+    public function insert(string $title, string $content): void {
+        $stmt = $this->pdo->prepare("INSERT INTO notes (title, content) VALUES (:title, :content)");
+        $stmt->execute(['title' => $title, 'content' => $content]);
+    }
 }
 ?>

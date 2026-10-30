@@ -13,6 +13,14 @@ $pdo = db();
 $repository = new NoteRepository($pdo);
 $controller = new NoteController($repository);
 
-// 3. Chạy chức năng hiển thị danh sách ghi chú
-$controller->index();
+// 3. Điều hướng request (Router)
+$action = $_GET['action'] ?? 'index';
+
+if ($action === 'create') {
+    $controller->create(); // Mở form thêm mới
+} elseif ($action === 'store') {
+    $controller->store();  // Lưu dữ liệu vào CSDL
+} else {
+    $controller->index();  // Hiển thị danh sách
+}
 ?>
